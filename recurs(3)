@@ -1,0 +1,27 @@
+def countdown(n):
+    print(n)          # Выводим число на экран
+    if n <= 1:
+        return        # Завершаем работу функции
+    else:
+        countdown(n - 1)
+
+
+def factorial(n):
+    if n == 1 or n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)  # Обязательно пишем return!
+
+
+def sum_recursive(n):
+    if n <= 1:
+        return n
+    else:
+        return n+sum_recursive(n-1)
+
+
+def count_list(lst):
+    if not lst:
+        return 0
+    else:
+        return 1 + count_list(lst[1:])
